@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-eve-dark: #341A00;
+  --color-eve-brown: #7D4001;
+  --color-eve-amber: #C66D0F;
+  --color-eve-cream: #FFE7CF;
+  --color-eve-olive: #D6CA85;
+  --color-eve-blue: #86D4ED;
+  --color-eve-pink: #E59393;
+  --color-eve-lavender: #B8A0E0;
+  --font-display: 'Comfortaa', sans-serif;
+  --font-body: 'Comfortaa', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: #1a1a1a;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+}
