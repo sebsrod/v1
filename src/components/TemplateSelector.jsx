@@ -31,12 +31,12 @@ export default function TemplateSelector({ selectedId, onSelect }) {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-3 max-h-[400px] overflow-y-auto pr-1">
+      <div className="grid grid-cols-3 md:grid-cols-2 gap-3 pb-4">
         {filtered.map((t) => (
           <button
             key={t.id}
             onClick={() => onSelect(t)}
-            className="group relative rounded-xl overflow-hidden transition-all aspect-square"
+            className="group relative rounded-xl overflow-hidden transition-all aspect-square active:scale-95"
             style={{
               background: t.bgColor,
               outline:
@@ -46,22 +46,22 @@ export default function TemplateSelector({ selectedId, onSelect }) {
               outlineOffset: '2px',
             }}
           >
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-3">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-2 md:p-3">
               <span
-                className="font-bold text-xs text-center leading-tight"
+                className="font-bold text-[10px] md:text-xs text-center leading-tight"
                 style={{ color: t.textColor, fontFamily: 'Comfortaa' }}
               >
                 {t.headline}
               </span>
               <span
-                className="text-[9px] mt-1 opacity-60 text-center"
+                className="text-[8px] md:text-[9px] mt-0.5 md:mt-1 opacity-60 text-center line-clamp-2"
                 style={{ color: t.textColor, fontFamily: 'Comfortaa' }}
               >
                 {t.subtitle}
               </span>
             </div>
             <div
-              className="absolute bottom-0 inset-x-0 py-1.5 text-[10px] font-semibold text-center opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute bottom-0 inset-x-0 py-1 md:py-1.5 text-[9px] md:text-[10px] font-semibold text-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
               style={{
                 background: 'rgba(0,0,0,0.6)',
                 color: '#fff',
