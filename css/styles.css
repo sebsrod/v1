@@ -53,44 +53,15 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 24px 0;
+    padding: 20px 0;
     transition: all var(--transition);
-    background: transparent;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(12px);
-    padding: 16px 0;
-    box-shadow: 0 1px 0 var(--gray-200);
-}
-
-.navbar.scrolled .logo {
-    color: var(--navy);
-}
-
-.navbar.scrolled .nav-links a {
-    color: var(--gray-600);
-}
-
-.navbar.scrolled .nav-links a:hover {
-    color: var(--navy);
-}
-
-.navbar.scrolled .lang-option {
-    color: var(--gray-400);
-}
-
-.navbar.scrolled .lang-option.active {
-    color: var(--navy);
-}
-
-.navbar.scrolled .lang-separator {
-    color: var(--gray-200);
-}
-
-.navbar.scrolled .hamburger span {
-    background: var(--navy);
+    padding: 14px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .nav-container {
@@ -106,10 +77,9 @@ img {
     font-family: var(--font-serif);
     font-size: 20px;
     font-weight: 700;
-    color: var(--white);
+    color: var(--navy);
     text-decoration: none;
     letter-spacing: -0.3px;
-    transition: color var(--transition);
 }
 
 .nav-links {
@@ -119,7 +89,7 @@ img {
 }
 
 .nav-links a {
-    color: rgba(255,255,255,0.75);
+    color: var(--gray-600);
     text-decoration: none;
     font-size: 12px;
     font-weight: 600;
@@ -129,7 +99,7 @@ img {
 }
 
 .nav-links a:hover {
-    color: var(--white);
+    color: var(--navy);
 }
 
 .nav-actions {
@@ -149,7 +119,7 @@ img {
 }
 
 .lang-option {
-    color: rgba(255,255,255,0.4);
+    color: var(--gray-400);
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -157,11 +127,11 @@ img {
 }
 
 .lang-option.active {
-    color: var(--white);
+    color: var(--navy);
 }
 
 .lang-separator {
-    color: rgba(255,255,255,0.2);
+    color: var(--gray-200);
     font-size: 12px;
 }
 
@@ -178,7 +148,7 @@ img {
 .hamburger span {
     width: 22px;
     height: 1.5px;
-    background: var(--white);
+    background: var(--navy);
     transition: all var(--transition);
 }
 
