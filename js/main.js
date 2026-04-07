@@ -11,8 +11,8 @@ function switchLanguage(lang) {
     });
 
     document.title = lang === 'es'
-        ? 'The Sovereign Editorial | Consultoría Legal y Financiera'
-        : 'The Sovereign Editorial | Legal & Financial Consulting';
+        ? 'TRF | Consultoría Legal y Financiera'
+        : 'TRF | Legal & Financial Consulting';
 
     document.documentElement.lang = lang;
 
