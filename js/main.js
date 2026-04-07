@@ -6,46 +6,21 @@ let currentLang = 'es';
 function switchLanguage(lang) {
     currentLang = lang;
 
-    // Update active state on toggle
     langOptions.forEach(opt => {
         opt.classList.toggle('active', opt.dataset.lang === lang);
     });
 
-    // Update page title
     document.title = lang === 'es'
-        ? 'LegalPro Consultores | Consultoría Legal y Financiera'
-        : 'LegalPro Consultores | Legal & Financial Consulting';
+        ? 'The Sovereign Editorial | Consultoría Legal y Financiera'
+        : 'The Sovereign Editorial | Legal & Financial Consulting';
 
-    // Update html lang attribute
     document.documentElement.lang = lang;
 
-    // Update all translatable elements
     document.querySelectorAll('[data-es]').forEach(el => {
         const text = el.getAttribute(`data-${lang}`);
         if (text) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') {
-                // For form elements, don't change text content
-            } else {
-                el.textContent = text;
-            }
+            el.innerHTML = text;
         }
-    });
-
-    // Update placeholders
-    document.querySelectorAll(`[data-${lang}-placeholder]`).forEach(el => {
-        el.placeholder = el.getAttribute(`data-${lang}-placeholder`);
-    });
-
-    // Update select options
-    document.querySelectorAll('select option[data-es]').forEach(opt => {
-        const text = opt.getAttribute(`data-${lang}`);
-        if (text) opt.textContent = text;
-    });
-
-    // Update labels
-    document.querySelectorAll('label[data-es]').forEach(label => {
-        const text = label.getAttribute(`data-${lang}`);
-        if (text) label.textContent = text;
     });
 }
 
@@ -56,17 +31,14 @@ langToggle.addEventListener('click', (e) => {
     }
 });
 
-// Navbar scroll behavior
+// Navbar scroll
 const navbar = document.getElementById('navbar');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    navbar.classList.toggle('scrolled', currentScroll > 50);
-    lastScroll = currentScroll;
+    navbar.classList.toggle('scrolled', window.pageYOffset > 50);
 });
 
-// Hamburger menu
+// Hamburger
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
@@ -75,7 +47,6 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Close mobile menu on link click
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -97,11 +68,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -109,29 +75,9 @@ const observer = new IntersectionObserver((entries) => {
             observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.service-card, .service-featured, .value-card, .team-card, .about-grid, .ethics-grid, .contact-grid').forEach(el => {
+document.querySelectorAll('.service-card, .why-item, .timeline-item, .team-card, .contact-box, .marco, .editorial-content, .vision-content').forEach(el => {
     el.classList.add('animate-in');
     observer.observe(el);
-});
-
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-        btn.textContent = currentLang === 'es' ? '¡Mensaje Enviado!' : 'Message Sent!';
-        btn.classList.add('success');
-        this.reset();
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.disabled = false;
-            btn.classList.remove('success');
-        }, 3000);
-    }, 1500);
 });
