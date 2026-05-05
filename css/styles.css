@@ -181,7 +181,7 @@ img {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url('images/banner-caracas.png') center/cover no-repeat;
+    background: url('../images/banner-caracas.png') center/cover no-repeat;
     padding: 160px 32px 120px;
 }
 
