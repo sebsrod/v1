@@ -11,8 +11,8 @@ function switchLanguage(lang) {
     });
 
     document.title = lang === 'es'
-        ? 'TRF | Consultoría Legal y Financiera'
-        : 'TRF | Legal & Financial Consulting';
+        ? 'TRF | The Resources Firm - Consultoría Legal y Financiera'
+        : 'TRF | The Resources Firm - Legal & Financial Consulting';
 
     document.documentElement.lang = lang;
 
@@ -67,6 +67,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Modals
+const modalOverlay = document.getElementById('modalOverlay');
+
+document.querySelectorAll('.service-card[data-modal]').forEach(card => {
+    card.addEventListener('click', () => {
+        const modalId = card.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modalOverlay.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+            modal.classList.add('active');
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+function closeModal() {
+    modalOverlay.classList.remove('active');
+    modalOverlay.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+    document.body.style.overflow = '';
+}
+
+modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+});
+
+document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+
 // Intersection Observer for animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -77,7 +111,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.service-card, .why-item, .timeline-item, .team-card, .contact-box, .marco, .editorial-content, .vision-content').forEach(el => {
+document.querySelectorAll('.service-card, .why-item, .timeline-item, .protocol-card, .dataroom, .contact-box, .marco, .editorial-content, .vision-content').forEach(el => {
     el.classList.add('animate-in');
     observer.observe(el);
 });

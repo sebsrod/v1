@@ -17,8 +17,8 @@
             <a href="#hero" class="logo">TRF <span class="logo-full">The Resources Firm</span></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#services" data-es="Servicios" data-en="Services">Servicios</a></li>
+                <li><a href="#specialized" data-es="Especializados" data-en="Specialized">Especializados</a></li>
                 <li><a href="#about" data-es="La Firma" data-en="The Firm">La Firma</a></li>
-                <li><a href="#team" data-es="Equipo" data-en="Team">Equipo</a></li>
                 <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
             </ul>
             <div class="nav-actions">
@@ -38,6 +38,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="hero-label" data-es="LIDERAZGO & PRESTIGIO" data-en="LEADERSHIP & PRESTIGE">LIDERAZGO & PRESTIGIO</span>
             <h1 class="hero-title" data-es="Excelencia en Consultoría Legal y Financiera" data-en="Excellence in Legal and Financial Consulting">Excelencia en Consultoría<br>Legal y Financiera</h1>
@@ -63,8 +64,23 @@
             <h2 class="section-title" data-es="Soluciones de Alto Nivel" data-en="High-Level Solutions">Soluciones de Alto Nivel</h2>
 
             <div class="services-grid">
-                <!-- Litigio -->
-                <div class="service-card">
+                <!-- Contrataciones Públicas -->
+                <div class="service-card" data-modal="modal-contrataciones">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="6" y="12" width="36" height="30" rx="2"/>
+                            <path d="M6 20h36"/>
+                            <path d="M16 6h16v6H16z"/>
+                            <path d="M14 28h20M14 34h12"/>
+                        </svg>
+                    </div>
+                    <h3 data-es="Contrataciones Públicas" data-en="Public Procurement">Contrataciones Públicas</h3>
+                    <p data-es="Asesoría especializada para organismos del Estado y entes privados en procesos de licitación y ejecución de contratos públicos." data-en="Specialized advisory for State agencies and private entities in bidding processes and public contract execution.">Asesoría especializada para organismos del Estado y entes privados en procesos de licitación y ejecución de contratos públicos.</p>
+                    <span class="service-link" data-es="VER DETALLES" data-en="VIEW DETAILS">VER DETALLES &rarr;</span>
+                </div>
+
+                <!-- Litigio (centro) -->
+                <div class="service-card service-card--featured" data-modal="modal-litigio">
                     <div class="service-icon">
                         <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M24 4L4 14v2h40v-2L24 4z"/>
@@ -77,26 +93,11 @@
                     </div>
                     <h3 data-es="Litigio y Defensa Legal" data-en="Litigation & Legal Defense">Litigio y Defensa Legal</h3>
                     <p data-es="Representación de alto impacto en procesos judiciales complejos, enfocada en la protección de activos y derechos corporativos." data-en="High-impact representation in complex judicial proceedings, focused on asset protection and corporate rights.">Representación de alto impacto en procesos judiciales complejos, enfocada en la protección de activos y derechos corporativos.</p>
-                    <a href="#contact" class="service-link" data-es="VER DETALLES" data-en="VIEW DETAILS">VER DETALLES &rarr;</a>
+                    <span class="service-link" data-es="VER DETALLES" data-en="VIEW DETAILS">VER DETALLES &rarr;</span>
                 </div>
 
-                <!-- Contrataciones -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="6" y="12" width="36" height="30" rx="2"/>
-                            <path d="M6 20h36"/>
-                            <path d="M16 6h16v6H16z"/>
-                            <path d="M14 28h20M14 34h12"/>
-                        </svg>
-                    </div>
-                    <h3 data-es="Contrataciones Públicas" data-en="Public Procurement">Contrataciones Públicas</h3>
-                    <p data-es="Asesoría especializada para organismos del Estado y entes privados en procesos de licitación y ejecución de contratos públicos." data-en="Specialized advisory for State agencies and private entities in bidding processes and public contract execution.">Asesoría especializada para organismos del Estado y entes privados en procesos de licitación y ejecución de contratos públicos.</p>
-                    <a href="#contact" class="service-link" data-es="VER DETALLES" data-en="VIEW DETAILS">VER DETALLES &rarr;</a>
-                </div>
-
-                <!-- Garantías -->
-                <div class="service-card">
+                <!-- Estructuración de Garantías -->
+                <div class="service-card" data-modal="modal-garantias">
                     <div class="service-icon">
                         <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M24 4L6 12v12c0 11 8 18 18 22 10-4 18-11 18-22V12L24 4z"/>
@@ -105,7 +106,135 @@
                     </div>
                     <h3 data-es="Estructuración de Garantías" data-en="Guarantee Structuring">Estructuración de Garantías</h3>
                     <p data-es="Fianzas a bajo costo para transnacionales, con riesgos delimitados por capas y sin utilización de activos patrimoniales." data-en="Low-cost bonds for transnationals, with layered risk delimitation and no use of patrimonial assets.">Fianzas a bajo costo para transnacionales, con riesgos delimitados por capas y sin utilización de activos patrimoniales.</p>
-                    <a href="#contact" class="service-link" data-es="VER DETALLES" data-en="VIEW DETAILS">VER DETALLES &rarr;</a>
+                    <span class="service-link" data-es="VER DETALLES" data-en="VIEW DETAILS">VER DETALLES &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modals -->
+    <div class="modal-overlay" id="modalOverlay">
+        <!-- Contrataciones Públicas -->
+        <div class="modal" id="modal-contrataciones">
+            <button class="modal-close">&times;</button>
+            <span class="section-label" data-es="SERVICIO" data-en="SERVICE">SERVICIO</span>
+            <h2 class="modal-title" data-es="Contrataciones Públicas" data-en="Public Procurement">Contrataciones Públicas</h2>
+            <div class="modal-body">
+                <p data-es="Asesoría y asistencia directa ante los organismos e instituciones del Estado venezolano en materia de contrataciones públicas, con especial expertise en los procedimientos regulados por la Ley de Crédito Público." data-en="Advisory and direct assistance before Venezuelan State agencies and institutions in public contracting matters, with special expertise in procedures regulated by the Public Credit Law.">Asesoría y asistencia directa ante los organismos e instituciones del Estado venezolano en materia de contrataciones públicas, con especial expertise en los procedimientos regulados por la Ley de Crédito Público.</p>
+                <ul>
+                    <li data-es="Gestión ante organismos del Estado" data-en="Management before State agencies">Gestión ante organismos del Estado</li>
+                    <li data-es="Procedimientos bajo Ley de Crédito Público" data-en="Procedures under Public Credit Law">Procedimientos bajo Ley de Crédito Público</li>
+                    <li data-es="Licitaciones y contrataciones directas" data-en="Tenders and direct contracting">Licitaciones y contrataciones directas</li>
+                    <li data-es="Cumplimiento regulatorio ante entes públicos" data-en="Regulatory compliance before public entities">Cumplimiento regulatorio ante entes públicos</li>
+                    <li data-es="Representación en procesos de adjudicación" data-en="Representation in award processes">Representación en procesos de adjudicación</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Litigio -->
+        <div class="modal" id="modal-litigio">
+            <button class="modal-close">&times;</button>
+            <span class="section-label" data-es="SERVICIO" data-en="SERVICE">SERVICIO</span>
+            <h2 class="modal-title" data-es="Litigio y Defensa Legal" data-en="Litigation & Legal Defense">Litigio y Defensa Legal</h2>
+            <div class="modal-body">
+                <p data-es="Nuestra área principal de práctica. Contamos con un equipo de abogados experimentados con sólida reputación en la resolución de problemas estratégicos y el manejo de asuntos altamente complejos ante los tribunales de la República." data-en="Our main practice area. We have a team of experienced lawyers with a solid reputation in solving strategic problems and handling highly complex matters before the courts of the Republic.">Nuestra área principal de práctica. Contamos con un equipo de abogados experimentados con sólida reputación en la resolución de problemas estratégicos y el manejo de asuntos altamente complejos ante los tribunales de la República.</p>
+                <ul>
+                    <li data-es="Derecho Constitucional y Administrativo" data-en="Constitutional and Administrative Law">Derecho Constitucional y Administrativo</li>
+                    <li data-es="Derecho Civil y Mercantil" data-en="Civil and Commercial Law">Derecho Civil y Mercantil</li>
+                    <li data-es="Derecho Procesal y Recursos de Casación" data-en="Procedural Law and Cassation Appeals">Derecho Procesal y Recursos de Casación</li>
+                    <li data-es="Derecho Económico y Financiero" data-en="Economic and Financial Law">Derecho Económico y Financiero</li>
+                    <li data-es="Derecho Laboral" data-en="Labor Law">Derecho Laboral</li>
+                    <li data-es="Arbitrajes nacionales e internacionales" data-en="National and international arbitrations">Arbitrajes nacionales e internacionales</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Garantías -->
+        <div class="modal" id="modal-garantias">
+            <button class="modal-close">&times;</button>
+            <span class="section-label" data-es="SERVICIO" data-en="SERVICE">SERVICIO</span>
+            <h2 class="modal-title" data-es="Estructuración de Garantías" data-en="Guarantee Structuring">Estructuración de Garantías</h2>
+            <div class="modal-body">
+                <p data-es="Asesoría financiera especializada en la estructuración de garantías para empresas transnacionales en contrataciones públicas, mediante la consecución de fianzas a bajo costo con riesgos delimitados por capas, sin utilización de activos financieros patrimoniales." data-en="Specialized financial advisory in structuring guarantees for transnational companies in public contracting, through obtaining low-cost bonds with layered risk delimitation, without using patrimonial financial assets.">Asesoría financiera especializada en la estructuración de garantías para empresas transnacionales en contrataciones públicas, mediante la consecución de fianzas a bajo costo con riesgos delimitados por capas, sin utilización de activos financieros patrimoniales.</p>
+                <ul>
+                    <li data-es="Fianzas internacionales a bajo costo" data-en="Low-cost international bonds">Fianzas internacionales a bajo costo</li>
+                    <li data-es="Riesgos delimitados por capas (UCP 600 / ISP 98)" data-en="Layered risk delimitation (UCP 600 / ISP 98)">Riesgos delimitados por capas (UCP 600 / ISP 98)</li>
+                    <li data-es="Protección de activos patrimoniales" data-en="Patrimonial asset protection">Protección de activos patrimoniales</li>
+                    <li data-es="Vehículos de propósito especial y fideicomisos" data-en="Special purpose vehicles and trusts">Vehículos de propósito especial y fideicomisos</li>
+                    <li data-es="Colocación ante reaseguradores internacionales" data-en="Placement with international reinsurers">Colocación ante reaseguradores internacionales</li>
+                    <li data-es="Emisión vía SWIFT (MT760)" data-en="Issuance via SWIFT (MT760)">Emisión vía SWIFT (MT760)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Servicios Especializados -->
+    <section class="section specialized" id="specialized">
+        <div class="container">
+            <span class="section-label" data-es="SERVICIOS ESPECIALIZADOS" data-en="SPECIALIZED SERVICES">SERVICIOS ESPECIALIZADOS</span>
+            <h2 class="section-title" data-es="Protocolo de Estructuración de Garantías Internacionales" data-en="International Guarantee Structuring Protocol">Protocolo de Estructuración de<br>Garantías Internacionales</h2>
+            <p class="specialized-intro" data-es="Nuestro enfoque se centra en la mitigación de riesgos y la optimización de colaterales, asegurando que cada instrumento emitido cuente con el respaldo de mercados de primer nivel y bajo los más estrictos estándares internacionales (UCP 600 / ISP 98)." data-en="Our approach focuses on risk mitigation and collateral optimization, ensuring each issued instrument is backed by top-tier markets under the strictest international standards (UCP 600 / ISP 98).">Nuestro enfoque se centra en la mitigación de riesgos y la optimización de colaterales, asegurando que cada instrumento emitido cuente con el respaldo de mercados de primer nivel y bajo los más estrictos estándares internacionales (UCP 600 / ISP 98).</p>
+
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <span class="protocol-number">I</span>
+                    <h3 data-es="Calificación y Viabilidad Técnica" data-en="Qualification & Technical Feasibility">Calificación y Viabilidad Técnica</h3>
+                    <p data-es="Diagnóstico profundo de la capacidad financiera del ordenante y los requisitos del contrato principal. Formalización mediante acuerdos de confidencialidad y servicios." data-en="In-depth assessment of the applicant's financial capacity and the main contract requirements. Formalization through confidentiality and service agreements.">Diagnóstico profundo de la capacidad financiera del ordenante y los requisitos del contrato principal. Formalización mediante acuerdos de confidencialidad y servicios.</p>
+                </div>
+                <div class="protocol-card">
+                    <span class="protocol-number">II</span>
+                    <h3 data-es="Ingeniería de Estructura y Colateral" data-en="Structure & Collateral Engineering">Ingeniería de Estructura y Colateral</h3>
+                    <p data-es="Diseño de la arquitectura de la garantía: evaluación de contragarantías, implementación de vehículos de propósito especial (fideicomisos o estructuras de protección) y optimización de activos de respaldo." data-en="Design of the guarantee architecture: evaluation of counter-guarantees, implementation of special purpose vehicles (trusts or protection structures), and optimization of backing assets.">Diseño de la arquitectura de la garantía: evaluación de contragarantías, implementación de vehículos de propósito especial (fideicomisos o estructuras de protección) y optimización de activos de respaldo.</p>
+                </div>
+                <div class="protocol-card">
+                    <span class="protocol-number">III</span>
+                    <h3 data-es="Colocación y Negociación Internacional" data-en="International Placement & Negotiation">Colocación y Negociación Internacional</h3>
+                    <p data-es="Gestión directa ante el mercado de reaseguradores y banca corresponsal mediante Information Memorandum ejecutivo, obteniendo condiciones competitivas en primas y colateral líquido." data-en="Direct management with the reinsurance market and correspondent banking through an executive Information Memorandum, obtaining competitive terms in premiums and liquid collateral.">Gestión directa ante el mercado de reaseguradores y banca corresponsal mediante Information Memorandum ejecutivo, obteniendo condiciones competitivas en primas y colateral líquido.</p>
+                </div>
+                <div class="protocol-card">
+                    <span class="protocol-number">IV</span>
+                    <h3 data-es="Ejecución y Emisión" data-en="Execution & Issuance">Ejecución y Emisión</h3>
+                    <p data-es="Revisión técnica de borradores y supervisión del proceso de emisión vía transmisión SWIFT (MT760) o documentos físicos verificables, garantizando plena aceptación del beneficiario." data-en="Technical review of drafts and supervision of the issuance process via SWIFT transmission (MT760) or verifiable physical documents, ensuring full acceptance by the beneficiary.">Revisión técnica de borradores y supervisión del proceso de emisión vía transmisión SWIFT (MT760) o documentos físicos verificables, garantizando plena aceptación del beneficiario.</p>
+                </div>
+            </div>
+
+            <div class="dataroom">
+                <h3 data-es="Data Room &mdash; Documentación Requerida" data-en="Data Room &mdash; Required Documentation">Data Room &mdash; Documentación Requerida</h3>
+                <div class="dataroom-grid">
+                    <div class="dataroom-col">
+                        <h4 data-es="Perfil Legal del Ordenante" data-en="Applicant's Legal Profile">Perfil Legal del Ordenante</h4>
+                        <ul>
+                            <li data-es="Estatutos Sociales y Acta Constitutiva certificados" data-en="Certified Articles of Incorporation and Bylaws">Estatutos Sociales y Acta Constitutiva certificados</li>
+                            <li data-es="Identificación y Poderes del Representante Legal" data-en="Legal Representative ID and Powers of Attorney">Identificación y Poderes del Representante Legal</li>
+                            <li data-es="RIF / Tax ID actualizado" data-en="Updated RIF / Tax ID">RIF / Tax ID actualizado</li>
+                            <li data-es="Estructura accionaria hasta beneficiario final (UBO)" data-en="Shareholder structure to Ultimate Beneficial Owner (UBO)">Estructura accionaria hasta beneficiario final (UBO)</li>
+                        </ul>
+                    </div>
+                    <div class="dataroom-col">
+                        <h4 data-es="Solvencia y Capacidad Financiera" data-en="Solvency & Financial Capacity">Solvencia y Capacidad Financiera</h4>
+                        <ul>
+                            <li data-es="Estados Financieros Auditados (últimos 3 ejercicios)" data-en="Audited Financial Statements (last 3 fiscal years)">Estados Financieros Auditados (últimos 3 ejercicios)</li>
+                            <li data-es="Balances de comprobación (antigüedad < 90 días)" data-en="Trial balances (less than 90 days old)">Balances de comprobación (antigüedad &lt; 90 días)</li>
+                            <li data-es="Declaraciones de ISLR (últimos 2 años)" data-en="Income tax returns (last 2 years)">Declaraciones de ISLR (últimos 2 años)</li>
+                            <li data-es="Referencias bancarias institucionales (mínimo 2)" data-en="Institutional bank references (minimum 2)">Referencias bancarias institucionales (mínimo 2)</li>
+                        </ul>
+                    </div>
+                    <div class="dataroom-col">
+                        <h4 data-es="Contrato y Beneficiario" data-en="Contract & Beneficiary">Contrato y Beneficiario</h4>
+                        <ul>
+                            <li data-es="Contrato o pliego de licitación" data-en="Contract or tender specifications">Contrato o pliego de licitación</li>
+                            <li data-es="Carta de adjudicación o intención" data-en="Award or intent letter">Carta de adjudicación o intención</li>
+                            <li data-es="Especificaciones del instrumento (monto, vigencia, texto)" data-en="Instrument specifications (amount, term, text)">Especificaciones del instrumento (monto, vigencia, texto)</li>
+                            <li data-es="Datos del oficial de cumplimiento del receptor" data-en="Recipient's compliance officer contact details">Datos del oficial de cumplimiento del receptor</li>
+                        </ul>
+                    </div>
+                    <div class="dataroom-col">
+                        <h4 data-es="Garantías y Contragarantías" data-en="Guarantees & Counter-Guarantees">Garantías y Contragarantías</h4>
+                        <ul>
+                            <li data-es="Relación de activos propuestos como colateral" data-en="List of assets proposed as collateral">Relación de activos propuestos como colateral</li>
+                            <li data-es="Certificaciones de gravamen y avalúos recientes" data-en="Lien certifications and recent appraisals">Certificaciones de gravamen y avalúos recientes</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -199,39 +328,6 @@
                     <span class="timeline-number">03</span>
                     <h3 data-es="Legado de Excelencia" data-en="Legacy of Excellence">Legado de Excelencia</h3>
                     <p data-es="Basados en pilares de excelencia técnica, integramos tecnología de vanguardia con la sabiduría de la práctica jurídica tradicional." data-en="Based on pillars of technical excellence, we integrate cutting-edge technology with the wisdom of traditional legal practice.">Basados en pilares de excelencia técnica, integramos tecnología de vanguardia con la sabiduría de la práctica jurídica tradicional.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Equipo Senior -->
-    <section class="section team" id="team">
-        <div class="container">
-            <h2 class="team-title" data-es="Equipo Senior" data-en="Senior Team"><em>Equipo Senior</em></h2>
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80" alt="Dr. Alejandro Vallenilla" loading="lazy">
-                    </div>
-                    <h4 class="team-name">Dr. Alejandro Vallenilla</h4>
-                    <span class="team-role" data-es="SOCIO PRINCIPAL | LITIGIO ESTRATÉGICO" data-en="MANAGING PARTNER | STRATEGIC LITIGATION">SOCIO PRINCIPAL | LITIGIO ESTRATÉGICO</span>
-                    <p class="team-bio" data-es="Más de 35 años liderando arbitrajes internacionales y derecho corporativo de alto perfil en la región andina." data-en="Over 35 years leading international arbitrations and high-profile corporate law in the Andean region.">Más de 35 años liderando arbitrajes internacionales y derecho corporativo de alto perfil en la región andina.</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80" alt="Dra. Elena Mendoza" loading="lazy">
-                    </div>
-                    <h4 class="team-name">Dra. Elena Mendoza</h4>
-                    <span class="team-role" data-es="SOCIA | ASESORÍA FINANCIERA" data-en="PARTNER | FINANCIAL ADVISORY">SOCIA | ASESORÍA FINANCIERA</span>
-                    <p class="team-bio" data-es="Especialista en estructuración de capital y cumplimiento normativo de crédito público en mercados emergentes." data-en="Specialist in capital structuring and public credit regulatory compliance in emerging markets.">Especialista en estructuración de capital y cumplimiento normativo de crédito público en mercados emergentes.</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80" alt="Abg. Roberto Castillo" loading="lazy">
-                    </div>
-                    <h4 class="team-name">Abg. Roberto Castillo</h4>
-                    <span class="team-role" data-es="SOCIO | CONTRATACIÓN PÚBLICA" data-en="PARTNER | PUBLIC PROCUREMENT">SOCIO | CONTRATACIÓN PÚBLICA</span>
-                    <p class="team-bio" data-es="Ex-consultor de organismos multilaterales con amplia trayectoria en licitaciones de infraestructura a gran escala." data-en="Former multilateral agency consultant with extensive experience in large-scale infrastructure tenders.">Ex-consultor de organismos multilaterales con amplia trayectoria en licitaciones de infraestructura a gran escala.</p>
                 </div>
             </div>
         </div>
